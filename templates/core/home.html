@@ -1,0 +1,535 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Insurance AI Agent - Simplify Insurance Claims in Nepal{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-robot"></i>
+                <span>AI-Powered Insurance Assistant</span>
+            </div>
+            <h1 class="hero-title">
+                Simplify Your <span class="highlight">Insurance Claims</span> with AI
+            </h1>
+            <p class="hero-description">
+                Upload a photo of your damaged vehicle and get instant claim insights. 
+                Understand your policy, check eligibility, and avoid claim rejections with our AI-powered assistant.
+            </p>
+            <div class="hero-buttons">
+                <a href="#analyze" class="btn btn-primary">
+                    <i class="fas fa-camera"></i>
+                    Analyze Damage Now
+                </a>
+                <a href="#chat" class="btn btn-secondary">
+                    <i class="fas fa-comments"></i>
+                    Talk to AI Assistant
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Claims Analyzed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">Accuracy Rate</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">AI Support</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-card">
+                <div class="card-header">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Claim Analysis Complete</span>
+                </div>
+                <div class="card-body">
+                    <div class="damage-item">
+                        <i class="fas fa-car-crash"></i>
+                        <div>
+                            <span class="damage-type">Bumper Damage</span>
+                            <span class="damage-status covered">Covered</span>
+                        </div>
+                    </div>
+                    <div class="estimate-box">
+                        <span class="estimate-label">Estimated Repair</span>
+                        <span class="estimate-value">NPR 25,000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-icon icon-1">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="floating-icon icon-2">
+                <i class="fas fa-brain"></i>
+            </div>
+            <div class="floating-icon icon-3">
+                <i class="fas fa-file-contract"></i>
+            </div>
+        </div>
+    </div>
+    <div class="hero-wave">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+        </svg>
+    </div>
+</section>
+
+<!-- Problem Statement Section -->
+<section id="problem" class="problem-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">The Problem</span>
+            <h2>Why Insurance Claims Are <span class="highlight">Difficult</span></h2>
+            <p>Millions of policyholders in Nepal face challenges when filing insurance claims</p>
+        </div>
+        <div class="problem-grid">
+            <div class="problem-card">
+                <div class="problem-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3>Complex Language</h3>
+                <p>Insurance policies are written in complex legal language that's hard for average people to understand.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <h3>Unclear Coverage</h3>
+                <p>Customers are often unaware of what's covered and what's excluded in their policies.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">
+                    <i class="fas fa-times-circle"></i>
+                </div>
+                <h3>Claim Rejections</h3>
+                <p>Claims get rejected without clear explanations, leaving customers frustrated and confused.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h3>Information Imbalance</h3>
+                <p>Insurance companies have more information and expertise than policyholders.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="features-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Our Solution</span>
+            <h2>Powerful <span class="highlight">AI Features</span></h2>
+            <p>Everything you need to understand and file your insurance claims with confidence</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <h3>AI Damage Detection</h3>
+                <p>Upload a photo and our AI identifies visible damage like bumper damage, broken headlights, dents, and more.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-link"></i>
+                </div>
+                <h3>Policy Clause Mapping</h3>
+                <p>Automatically links detected damage to relevant sections of your insurance policy.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-check-double"></i>
+                </div>
+                <h3>Claim Eligibility Check</h3>
+                <p>Instantly know if your damage is likely covered and what documents you need.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>AI Chat Assistant</h3>
+                <p>Get answers to your questions in simple language, 24/7. No insurance jargon.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>Transparency Insights</h3>
+                <p>Learn about common claim rejection tactics and how to protect your rights.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h3>Repair Estimates</h3>
+                <p>Get instant repair cost estimates to help you decide whether to file a claim.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Damage Analysis Section -->
+<section id="analyze" class="analyze-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Damage Analysis</span>
+            <h2>Analyze Your <span class="highlight">Vehicle Damage</span></h2>
+            <p>Upload a photo and get instant AI-powered analysis</p>
+        </div>
+        
+        <div class="analyze-container">
+            <!-- Upload Area -->
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-content">
+                    <div class="upload-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h3>Upload Damage Photo</h3>
+                    <p>Drag and drop your image here, or click to browse</p>
+                    <span class="upload-formats">Supports: JPG, PNG (Max 10MB)</span>
+                    <input type="file" id="damageImage" accept="image/*" hidden>
+                    <button class="btn btn-outline" onclick="document.getElementById('damageImage').click()">
+                        <i class="fas fa-folder-open"></i>
+                        Choose File
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Preview Area (hidden initially) -->
+            <div class="preview-area" id="previewArea" style="display: none;">
+                <div class="preview-container">
+                    <img id="previewImage" src="" alt="Damage Preview">
+                    <button class="btn btn-remove" id="removeImage">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <button class="btn btn-primary btn-analyze" id="analyzeBtn">
+                    <i class="fas fa-microscope"></i>
+                    Analyze Damage
+                </button>
+            </div>
+            
+            <!-- Analysis Results (hidden initially) -->
+            <div class="analysis-results" id="analysisResults" style="display: none;">
+                <div class="results-header">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h3>Analysis Results</h3>
+                </div>
+                
+                <div class="results-content">
+                    <!-- Damage Detection -->
+                    <div class="result-card">
+                        <div class="result-title">
+                            <i class="fas fa-search"></i>
+                            <span>Detected Damage</span>
+                        </div>
+                        <div class="result-body" id="damageDetection">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                    
+                    <!-- Eligibility -->
+                    <div class="result-card">
+                        <div class="result-title">
+                            <i class="fas fa-gavel"></i>
+                            <span>Claim Eligibility</span>
+                        </div>
+                        <div class="result-body" id="eligibilityResult">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                    
+                    <!-- Policy Clauses -->
+                    <div class="result-card">
+                        <div class="result-title">
+                            <i class="fas fa-book"></i>
+                            <span>Relevant Policy Clauses</span>
+                        </div>
+                        <div class="result-body" id="policyClauses">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                    
+                    <!-- Repair Estimate -->
+                    <div class="result-card">
+                        <div class="result-title">
+                            <i class="fas fa-calculator"></i>
+                            <span>Repair Estimate</span>
+                        </div>
+                        <div class="result-body" id="repairEstimate">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                    
+                    <!-- Required Documents -->
+                    <div class="result-card">
+                        <div class="result-title">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Required Documents</span>
+                        </div>
+                        <div class="result-body" id="requiredDocuments">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-actions">
+                    <button class="btn btn-secondary" id="newAnalysis">
+                        <i class="fas fa-redo"></i>
+                        Analyze Another
+                    </button>
+                    <button class="btn btn-primary" id="saveClaim">
+                        <i class="fas fa-save"></i>
+                        Save Claim
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Loading State -->
+            <div class="loading-state" id="loadingState" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p>Analyzing your image with AI...</p>
+                <span>This may take a few seconds</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AI Chat Section -->
+<section id="chat" class="chat-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">AI Assistant</span>
+            <h2>Chat with Our <span class="highlight">Insurance Expert</span></h2>
+            <p>Get answers to all your insurance questions in simple language</p>
+        </div>
+        
+        <div class="chat-container">
+            <div class="chat-sidebar">
+                <div class="chat-intro">
+                    <i class="fas fa-robot"></i>
+                    <h3>How can I help you?</h3>
+                    <p>Ask me anything about insurance claims, coverage, or policies</p>
+                </div>
+                <div class="suggested-questions">
+                    <h4>Suggested Questions:</h4>
+                    <button class="suggestion-btn" data-question="How do I file an insurance claim?">
+                        How do I file an insurance claim?
+                    </button>
+                    <button class="suggestion-btn" data-question="What documents do I need?">
+                        What documents do I need?
+                    </button>
+                    <button class="suggestion-btn" data-question="Why do claims get rejected?">
+                        Why do claims get rejected?
+                    </button>
+                    <button class="suggestion-btn" data-question="What is covered in my policy?">
+                        What is covered in my policy?
+                    </button>
+                    <button class="suggestion-btn" data-question="What is No-Claim Bonus?">
+                        What is No-Claim Bonus?
+                    </button>
+                </div>
+            </div>
+            
+            <div class="chat-main">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>Namaste! I'm your Insurance AI Assistant. I can help you with:</p>
+                            <ul>
+                                <li>Understanding claim processes</li>
+                                <li>Required documents</li>
+                                <li>Coverage details</li>
+                                <li>Claim rejection reasons</li>
+                                <li>Premium information</li>
+                            </ul>
+                            <p>What would you like to know?</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-area">
+                    <div class="chat-input-wrapper">
+                        <input type="text" id="chatInput" placeholder="Type your question here..." autocomplete="off">
+                        <button id="sendMessage" class="btn-send">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <button id="clearChat" class="btn-clear">
+                        <i class="fas fa-trash"></i>
+                        Clear Chat
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Transparency Section -->
+<section id="transparency" class="transparency-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Know Your Rights</span>
+            <h2>Claim <span class="highlight">Transparency</span> Insights</h2>
+            <p>Understand common claim rejection tactics and how to protect yourself</p>
+        </div>
+        
+        <div class="transparency-content">
+            <div class="transparency-intro">
+                <div class="intro-card">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Common Rejection Reasons</h3>
+                    <p>Learn why insurance companies reject claims and how to avoid these pitfalls</p>
+                </div>
+            </div>
+            
+            <div class="rejection-reasons" id="rejectionReasons">
+                <!-- Populated by JS -->
+            </div>
+            
+            <div class="tips-section">
+                <h3><i class="fas fa-lightbulb"></i> Pro Tips to Avoid Rejection</h3>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-number">1</div>
+                        <h4>Report Immediately</h4>
+                        <p>Notify your insurer within 24 hours of any incident. Delays are a common reason for rejection.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-number">2</div>
+                        <h4>Document Everything</h4>
+                        <p>Take clear photos from multiple angles immediately after the incident.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-number">3</div>
+                        <h4>Read Your Policy</h4>
+                        <p>Understand what's covered and what's excluded before you need to claim.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-number">4</div>
+                        <h4>Keep Records</h4>
+                        <p>Maintain all receipts, FIR copies, and communication with your insurer.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-number">5</div>
+                        <h4>Don't Repair First</h4>
+                        <p>Always get insurer approval before any repairs. Unauthorized repairs are not covered.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-number">6</div>
+                        <h4>Be Honest</h4>
+                        <p>Never hide facts or provide false information. This can void your entire policy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to Simplify Your Insurance Claims?</h2>
+            <p>Join thousands of Nepalese who trust our AI to navigate the insurance claim process</p>
+            <div class="cta-buttons">
+                <a href="#analyze" class="btn btn-white">
+                    <i class="fas fa-camera"></i>
+                    Analyze Damage
+                </a>
+                <a href="#chat" class="btn btn-outline-white">
+                    <i class="fas fa-comments"></i>
+                    Ask AI Assistant
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Claim Modal -->
+<div class="modal" id="claimModal" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3><i class="fas fa-save"></i> Save Your Claim</h3>
+            <button class="modal-close" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form id="claimForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="full_name" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="vehicleType">Vehicle Type</label>
+                        <select id="vehicleType" name="vehicle_type">
+                            <option value="car">Car</option>
+                            <option value="motorcycle">Motorcycle</option>
+                            <option value="truck">Truck</option>
+                            <option value="bus">Bus</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicleNumber">Vehicle Number *</label>
+                        <input type="text" id="vehicleNumber" name="vehicle_number" placeholder="e.g., BA 1 PA 1234" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="policyNumber">Insurance Policy Number</label>
+                    <input type="text" id="policyNumber" name="insurance_policy_number" placeholder="Optional">
+                </div>
+                <div class="form-group">
+                    <label for="damageDescription">Damage Description</label>
+                    <textarea id="damageDescription" name="damage_description" rows="3" placeholder="Describe the damage in your own words"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" id="cancelClaim">Cancel</button>
+            <button class="btn btn-primary" id="submitClaim">
+                <i class="fas fa-paper-plane"></i>
+                Submit Claim
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast" style="display: none;">
+    <i class="fas fa-check-circle"></i>
+    <span id="toastMessage">Operation successful</span>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Chat session ID
+    let chatSessionId = null;
+</script>
+{% endblock %}
