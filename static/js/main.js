@@ -90,16 +90,32 @@ function initUploadArea() {
     const uploadArea = document.getElementById('uploadArea');
     const fileInput = document.getElementById('damageImage');
     const previewArea = document.getElementById('previewArea');
-    const previewImage = document.getElementById('previewImage');
     const removeBtn = document.getElementById('removeImage');
     const analyzeBtn = document.getElementById('analyzeBtn');
-    const analysisResults = document.getElementById('analysisResults');
-    const loadingState = document.getElementById('loadingState');
     const newAnalysisBtn = document.getElementById('newAnalysis');
     const saveClaimBtn = document.getElementById('saveClaim');
     
-    if (!uploadArea) return;
-    
+    if (!uploadArea || !fileInput) return;
+
+    // 1. SILENCE THE HTML BUTTON: Find the button with the inline onclick and kill it
+    const inlineBtn = uploadArea.querySelector('button[onclick]');
+    if (inlineBtn) {
+        inlineBtn.removeAttribute('onclick');
+    }
+
+    // 2. THE MASTER CLICK HANDLER
+    uploadArea.addEventListener('click', (e) => {
+        // Only trigger if the click didn't come directly from the input itself
+        if (e.target !== fileInput) {
+            fileInput.click();
+        }
+    });
+
+    // 3. STOP BUBBLING: Prevent the input from telling the parent it was clicked
+    fileInput.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+
     // Drag and drop events
     uploadArea.addEventListener('dragover', (e) => {
         e.preventDefault();
@@ -120,10 +136,6 @@ function initUploadArea() {
         }
     });
     
-    uploadArea.addEventListener('click', () => {
-        fileInput.click();
-    });
-    
     fileInput.addEventListener('change', (e) => {
         if (e.target.files.length > 0) {
             handleFileUpload(e.target.files[0]);
@@ -131,17 +143,18 @@ function initUploadArea() {
     });
     
     removeBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
+        e.stopPropagation(); 
         resetUpload();
     });
     
-    analyzeBtn.addEventListener('click', analyzeDamage);
-    
-    newAnalysisBtn.addEventListener('click', resetUpload);
-    
-    saveClaimBtn.addEventListener('click', () => {
-        document.getElementById('claimModal').style.display = 'flex';
-    });
+    if (analyzeBtn) analyzeBtn.addEventListener('click', analyzeDamage);
+    if (newAnalysisBtn) newAnalysisBtn.addEventListener('click', resetUpload);
+    if (saveClaimBtn) {
+        saveClaimBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            document.getElementById('claimModal').style.display = 'flex';
+        });
+    }
 }
 
 function handleFileUpload(file) {
